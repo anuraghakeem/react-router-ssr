@@ -3,7 +3,7 @@ import {Switch, Route} from 'react-router'
 
 import Home from './pages/homePageComponent'
 
-export const App =()=>{
+const App =()=>{
     return (
         <Switch>
             <Route path='/' render={(props)=>(
@@ -13,3 +13,5 @@ export const App =()=>{
         </Switch>
     );
 }
+
+export default App;
