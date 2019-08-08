@@ -1,6 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+import Counter from './../comp/Counter'
+
  const Home =()=>{
     const consoleMethod=()=>{
         console.log("Button pressed");
@@ -25,6 +27,7 @@ import Helmet from 'react-helmet'
                 Content
             </p>
             <button onClick={()=>consoleMethod()}>Console dummy</button>
+            <Counter />
         </div>
     );
 }

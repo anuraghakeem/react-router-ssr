@@ -1,6 +1,9 @@
 {
   "name": "react-router-ssr",
   "version": "1.0.0",
+  "babel": {
+    "presets": [ "env","react" ]
+  },
   "description": "",
   "main": "index.js",
   "script": {
@@ -21,7 +24,15 @@
     "webpack:server": "webpack --config webpack.server.js --watch",
     "webpack:start": "nodemon --watch build --exec node build/bundle.js",
     "dev": "npm-run-all --parallel webpack:*",
-    "build": "webpack --config webpack.client.js && webpack --config webpack.server.js"
+    "build": "webpack --config webpack.client.js && webpack --config webpack.server.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.8.0"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
